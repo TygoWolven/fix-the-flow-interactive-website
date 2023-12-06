@@ -1,3 +1,5 @@
+// === Vanaf hier begint de code van de template! === //
+
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -24,3 +26,14 @@ modeSwitch.addEventListener("click" , () =>{
         
     }
 });
+
+// === Vanaf hier begint mijn eigen code! === //
+
+// const   dropDownBtn = document.querySelector(".filters > li > button"),
+//         dropDown    = document.querySelector(".dropdown");
+
+// dropDownBtn.addEventListener("mouseover, dropDownOpen");
+
+// function dropDownOpen (){
+//     dropDown.classList.add(".dropdown-open");
+// }

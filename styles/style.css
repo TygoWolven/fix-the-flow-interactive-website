@@ -1,7 +1,102 @@
+
+  /**********************************************/
+ /***** Vanaf hier begint mijn eigen code! *****/
+/**********************************************/
+
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid black;
+    transition: 0.5s;
+}
+
+.filters > li:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Filter-System */
+.filter-system {
+    position: absolute;
+    left: 60px;
+    z-index: 100;
+}
+
+/* General Filters */
+.filters {
+    display: flex;
+    gap: 1em;
+}
+
+.filters > li:hover .dropdown {
+    background-color: var(--sidebar-color);
+    display: block;
+    padding: 1em;
+}
+
+.filter-name {
+    width: 180px;
+    background-color: var(--sidebar-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    & button {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+#genre {
+    width: 180px;
+}
+#language {
+    width: 150px;
+}
+#type {
+    width: 250px;
+}
+
+/* General Dropdowns */
+.dropdown {
+    display: none;
+}
+
+.dropdown > li > input {
+    float: right;
+}
+
+/* Results */
 .results {
 
     position: absolute;
+    bottom: 60px;
     left: 60px;
+
+    & h3 {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1em;
+    }
 
     & ul {
         display: flex;
@@ -12,11 +107,18 @@
         background-color: var(--sidebar-color); 
         text-align: center;
         width: 18em;
-        position: relative;
+        height: 31.9em;
+        overflow: scroll;
     }
 
     & ul li:hover .slide {
-        display: block;
+        top: 0;
+        transition: ease 0.5s;
+    }
+
+    & ul li:hover .slide {
+        top: 0;
+        transition: ease 0.5s;
     }
 
     & ul li img {
@@ -25,15 +127,23 @@
         height: 25em;
     }
 
-    & h3 {
-        padding: 1em;
-    }
-
 }
 
 .slide {
-    display: none;
+    position: relative;
+    top: 100px;
+    transition: ease 0.5s;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -405,9 +515,9 @@ body.dark .switch::before{
 }
 
 .sidebar.close ~ .home{
-    left: 78px;
+    left: 88px;
     height: 100vh;
-    width: calc(100% - 78px);
+    width: calc(100% - 88px);
 }
 body.dark .home .text{
     color: var(--text-color);
