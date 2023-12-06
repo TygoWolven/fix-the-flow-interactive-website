@@ -1,3 +1,59 @@
+.results {
+
+    & ul {
+        display: flex;
+        gap: 1em;
+    }
+
+    & ul li {
+        background-color: var(--sidebar-color); 
+        text-align: center;
+        width: 17em;
+        position: relative;
+    }
+
+    & ul li:hover .slide {
+        display: block;
+    }
+
+    & ul li img {
+        padding: 1em 1em 0 1em;
+        width: 17em;
+    }
+
+    & h3 {
+        padding: 1em;
+    }
+
+}
+
+.slide {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Fonts being used by the oba */
 @font-face {
     font-family: AvenirRoman;
