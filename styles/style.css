@@ -1,17 +1,34 @@
 
-  /**********************************************/
- /***** Vanaf hier begint mijn eigen code! *****/
-/**********************************************/
+  /***************************************************************/
+ /***** Vanaf hier begint mijn eigen code van de Leeslijst! *****/
+/***************************************************************/
+
+/* Custom Properties */
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #FF0000;
+    --primary-color-light: #ebebeb;
+    --toggle-color: #DDD;
+    --text-color: #505050;
+
+    --border: 0.8em solid var(--sidebar-color);
+    --thin-border: 0.25em solid var(--sidebar-color);
+}
 
 /* General */
 * {
     padding: 0;
-    margin: 0;
-    overflow: hidden;
 }
 
 li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 ::-webkit-scrollbar {
@@ -108,17 +125,19 @@ li {
         text-align: center;
         width: 18em;
         height: 31.9em;
-        overflow: scroll;
+        overflow: hidden;
     }
 
-    & ul li:hover .slide {
-        top: 0;
-        transition: ease 0.5s;
+    & ul li:hover .small-slide {
+        position: relative;
+        top: -100px;
+        transition: 0.5s;
     }
 
-    & ul li:hover .slide {
-        top: 0;
-        transition: ease 0.5s;
+    & ul li:hover .big-slide {
+        position: relative;
+        top: -100px;
+        transition: 0.5s;
     }
 
     & ul li img {
@@ -129,18 +148,223 @@ li {
 
 }
 
-.slide {
+.small-slide {
     position: relative;
+    top: 0;
+    transition: 0.5s;
+}
+
+.big-slide {
+    position: relative;
+    padding: 0 0.75em 0 0.75em;
     top: 100px;
-    transition: ease 0.5s;
+    transition: 0.5s;
 }
 
 
+  /******************************************************************/
+ /***** Vanaf hier begint mijn eigen code van de Detailpagina! *****/
+/******************************************************************/
 
 
+.bookdetails {
+    padding: 2em;
+    margin: 0 6em 0 6em;
+    background-color: var(--sidebar-color);
+    border: var(--thin-border);
 
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-areas: 
+    "image author reservation"
+    "image title title"
+    "image details availability"
+    "image list list2"
+    "suggestion suggestion suggestion"
+    "authinfo authinfo authinfo";
 
+    /* === Headers === */
 
+    & h1 {
+        font-size: 3.25em;
+        padding-left: 1em;
+        margin-top: -0.15em;  
+        grid-area: title;
+    }
+
+    & h2 {
+        font-weight: 100;
+        font-size: 2em;
+        padding-left: 1.62em;        
+        grid-area: author;
+        align-self: end;
+    }
+
+    & h3{
+        grid-area: details;
+        align-self: end; 
+    } 
+
+    & > h3:nth-of-type(1){
+        padding-left: 2.25em;
+    }  
+
+    & h3:nth-of-type(2){
+        grid-area: availability;
+    } 
+
+    /* === Images === */
+
+    & img {
+        max-width: 22em;
+        border: var(--border);
+
+        grid-area: image;
+    }
+
+    /* === Buttons === */
+        
+    & > button {
+        border: var(--thin-border);
+        transition: var(--tran-05);
+        scale: 0.8;
+
+        grid-area: reservation;
+    }
+
+    & > button:hover {
+        background-color: var(--primary-color);
+        color: var(--sidebar-color);
+        transition: var(--tran-05);
+        cursor: pointer;
+    }
+
+    & button > h3 {
+        padding: 0;
+    }
+
+    /* === Paragraphs === */
+
+    & p {
+        padding-left: 2em;
+
+        grid-area: description;
+        align-self: center;
+    }
+
+    & > p:nth-of-type(1) {
+        max-width: 80%;
+    }
+
+    /* === Details === */
+
+    & > ul {
+        list-style: none;
+        padding-left: 3.4em;  
+
+        grid-area: list;
+    }
+
+    & > ul:nth-of-type(2) {
+        padding-left: 16em;
+    }
+
+    /* === Beschikbaarheid === */
+
+    & > ul:nth-of-type(3) {
+        padding: 0;
+
+        grid-area: list2;
+    }
+
+}
+
+.recommended {
+    padding-top: 2.5em;
+    position: relative;
+
+    grid-area: suggestion;
+
+    & > ul {
+        display: flex;
+        overflow-x: scroll;
+        margin: 0 3em 0 3em;
+        list-style: none;
+    }
+
+    & ul li img {
+        max-width: 12em;
+        margin-left: -0.6em;
+    }
+
+    & button {
+        height: 65px;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        background: transparent;
+        border: none;
+        font-size: 3em;
+        transition: var(--tran-05);
+        color: var(--text-color);
+    }
+
+    & button:hover {
+        scale: 1.25;
+        transition: var(--tran-05);
+    }
+
+    & button:nth-of-type(1) {
+        bottom: 140px;
+        left: 5px;
+    }
+
+    & button:nth-of-type(2) {
+        bottom: 140px;
+        right: 5px;
+    }
+
+}
+
+.authinfo {
+    max-width: 90%;
+    padding-top: 2em;
+
+    grid-area: authinfo;
+
+    & > h3 > button {
+        background-color: transparent;
+        border: none;
+        color: var(--text-color);
+        opacity: 80%;
+        scale: 1.2;
+        padding-left: 1em;
+        cursor: pointer;
+    }
+
+    & h4 {
+        font-size: 1.3em;
+        padding: 1em 0 0.3em 1.58em;
+    }
+
+    .dropdown {
+        display: none;
+
+        & > p {
+            max-width: 70%;
+        }
+
+    }
+
+    .dropdown-open {
+        display: block;
+    }
+
+    & #elsa {
+        float: right;
+        margin-top: -20em;
+    }
+
+}
 
 
 

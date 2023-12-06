@@ -29,11 +29,57 @@ modeSwitch.addEventListener("click" , () =>{
 
 // === Vanaf hier begint mijn eigen code! === //
 
-// const   dropDownBtn = document.querySelector(".filters > li > button"),
-//         dropDown    = document.querySelector(".dropdown");
+const dropDownButton    = document.querySelector(".authinfo > h3 > button"),
+      dropDown          = document.querySelector(".dropdown"),
+      reservationButton = document.querySelector(".bookdetails > button"),
+      reservationState  = document.querySelector(".bookdetails > button > h3");
 
-// dropDownBtn.addEventListener("mouseover, dropDownOpen");
+var leftButton          = document.getElementById("scroll-left");
+var rightButton         = document.getElementById("scroll-right");
 
-// function dropDownOpen (){
-//     dropDown.classList.add(".dropdown-open");
-// }
+dropDownButton.addEventListener("click" , () =>{
+    dropDown.classList.toggle("dropdown-open");
+});
+
+function scrollWin() {
+    window.scrollBy(0, 1000);
+}
+
+reservationButton.addEventListener("click" , () =>{
+    reservationState.textContent = "Toegevoegd aan Reserveringen!";
+});
+
+leftButton.onclick = function () {
+    var container = document.querySelector(".recommended > ul");
+    sideScroll(container,'left',15,190,10)
+};
+
+rightButton.onclick = function () {
+    var container = document.querySelector(".recommended > ul");
+    sideScroll(container,'right',15,190,10);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}
+
+function isChecked() {
+    if(document.getElementById("actie").
+    checked) {
+        console.log("Waddup Homies");
+    } 
+    else {
+        console.log("Ainoh Fakka");
+    }
+} 

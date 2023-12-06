@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link naar CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    
+    <!-- Link naar boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link naar JavaScript -->
+    <script src="./scripts/script.js" defer></script>
+
+    <title>Openbare Bibliotheek Amsterdam</title>
+</head>
+
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <a href="./index.html">
+                    <img src="./image/AmberFoto.jpeg" alt="Gebruiker-foto">
+                    </a>
+                </span>
+
+                <div class="text logo-text">
+                    <a href="./index.html" id="user-name">
+                    <span class="name">Amber v/d Reijden</span>
+                    <span class="profession">5 jaar lid</span>
+                    </a>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Zoek...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="./index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Welkom</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> 
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text">Familieoverzicht</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" style="background: #FF0000; border-radius: 6px;">
+                        <a href="./leeslijst.html">
+                            <i class='bx bx-list-ul icon' style="color: #FFF;"></i>
+                            <span class="text nav-text" style="color: #FFF;">Leeslijst</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text-long nav-text">Uitleningen en verlengen</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Uitleengeschiedenis</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Betaalgeschiedenis</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Reserveringen</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Deposito's</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Tellerstand abonnement</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Uitloggen</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Vanaf dit punt begint mijn code! -->
+
+    <section class="home">
+
+        <div class="text">
+            <img src="./image/oba_20.png" alt="Logo-OBA">
+        </div>
+
+        <!-- We starten met een nieuwe section waarin wij onze informatie in gaan zetten. -->
+
+        <section class="bookdetails">
+
+            <img src="./image/degeschiedenis.jpg" alt="Voorkant Boek De geschiedenis">
+
+            <h1>De geschiedenis</h1>
+            <h2>Elsa Morante</h2>
+
+            <!-- Bovenaan beginnen we met de belangrijkste informatie over het boek. -->
+
+            <button><h3>Toevoegen aan Reserveringen</h3></button>
+
+            <h3>Details:</h3>
+            <ul>
+                <li>Titel:        </li>
+                <li>Auteur:       </li>
+                <li><br>Uitgever: </li>
+                <li>Taal:         </li>
+                <li>Editie:       </li>
+                <li>Kenmerken:    </li>
+                <li>Genre:        </li>                    
+                <li>ISBN:         </li>
+            </ul>
+            <ul>
+                <li>De geschiedenis                           </li>
+                <li>Elsa Morante,<br>Frederique van der Velde </li>
+                <li>Amsterdam : Wereldbibliotheek, 2023       </li>
+                <li>Nederlands                                </li>
+                <li>Vierde druk                               </li>
+                <li>623 pagina's ; 24cm                       </li>
+                <li>Politieke roman                           </li>
+                <li>=9789028451001                            </li>
+            </ul>
+
+            <h3>Beschikbaarheid:</h3>
+            <ul>
+                <li>
+                    <p>✅ OBA Oosterdok</p>
+                </li>
+                <li>
+                    <p>❌ OBA Bijlmerplein</p>
+                </li>
+                <li>
+                    <p>✅ OBA Buitenveldert</p>
+                </li>
+                <li>
+                    <p>✅ OBA Diemen</p>
+                 </li>
+                <li>
+                    <p>✅ OBA Javaplein</p>
+                </li>
+                <li>
+                    <p>❌ OBA Linnaeus</p>
+                </li>
+                <li>
+                    <p>❌ OBA Molenwijk</p>
+                </li>
+                <li>
+                    <p>✅ OBA Osdorp</p>
+                </li>
+                <li>
+                    <p>❌ OBA Reigersbos</p>
+                </li>
+            </ul>
+
+            <!-- Vanaf dit punt is de code voor de voorgestelde boeken op basis van "De geschiedenis". -->
+
+            <section class="recommended">
+                <h3>Op basis van dit boek:</h3>
+
+                <button id="scroll-left"><i class='bx bx-chevron-left toggle'></i></button>
+                <button id="scroll-right"><i class='bx bx-chevron-right toggle'></i></button>
+                
+                <ul>
+                    <li>
+                        <img src="./image/book-1.png" alt="Voorkant Boek Placeholder">
+                        <p>The Art City</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-2.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Thanks in Everything</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-3.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Your Name</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-4.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Your Title Goes Here</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-5.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Music Rock</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-6.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Sample Text</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-7.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Seagull</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-8.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Black History Month</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-9.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Love You</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-1.png" alt="Voorkant Boek Placeholder">
+                        <p>The Art City</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-2.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Thanks in Everything</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-3.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Your Name</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-4.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Your Title Goes Here</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-5.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Music Rock</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-6.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Sample Text</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-7.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Seagull</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-8.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Black History Month</p>
+                    </li>
+                    <li>
+                        <img src="./image/book-9.png" alt="Voorkant Boek Placeholder">                        
+                        <p>Love You</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Informatie over de Auteur is optioneel, met een dropdown. Dit heb ik gedaan om grote lappen tekst te verbergen. -->
+
+            <section class="authinfo">
+
+                <h3>Over Elsa Morante: <button onclick="scrollWin()">Lees meer...</button></h3>           
+
+                <div class="dropdown">
+
+                    <p>
+                      Elsa Morante (Rome, 18 augustus 1912 - aldaar, 25 november 1985) was een van de bekendste Italiaanse schrijfsters 
+                      van de twintigste eeuw.
+                    </p>
+
+                    <h4>Leven en Werk:</h4>
+                    <p>
+                      Morante werd geboren in Rome, waar ze, met uitzondering van een periode tijdens de Tweede Wereldoorlog, haar hele leven 
+                      woonde. Ze begon in de jaren dertig met het schrijven van korte verhalen en publiceerde haar eerste boek in 1941, een verzameling 
+                      verhalen getiteld Il Gioco Segreto. In datzelfde jaar huwde ze de cineast en schrijver Alberto Moravia. Samen met haar echtgenoot 
+                      vluchtte ze aan het einde van de oorlog (ze waren beide joods) naar het zuidelijke platteland van Italië. Die gebeurtenis is ook 
+                      kenmerkend voor haar verdere werk. Enkele van haar boeken zijn verfilmd. Haar laatste roman, Aracoeli, verscheen in 1982, drie 
+                      jaar voor haar dood.Morante stond bekend als een onorthodoxe Italiaans auteur. Gedurende haar schrijfcarrière stond ze erom bekend 
+                      dat ze tegen vele heilige huisjes schopte. In haar beroemdste roman bijvoorbeeld, De Geschiedenis, laakt ze de ideologieën van haar 
+                      landgenoten tijdens de Tweede Wereldoorlog.
+                    </p>
+                    
+                    <img src="./image/Elsa_morante_gatti.jpg" alt="Elsa Morante" id="elsa">
+
+                </div>
+ 
+            </section>
+
+        </section>
+
+    </section>
+    
+</body>
+</html>
