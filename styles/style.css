@@ -3,19 +3,6 @@
  /***** Vanaf hier begint mijn eigen code van de Leeslijst! *****/
 /***************************************************************/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Custom Properties */
 
 :root {
@@ -167,6 +154,7 @@ button {
         position: relative;
         top: -100px;
         transition: 0.5s;
+        opacity: 100%;
     }
 
     & ul li img {
@@ -187,6 +175,7 @@ button {
     padding: 0 0.75em 0 0.75em;
     top: 100px;
     transition: 0.5s;
+    opacity: 0%;
 }
 
 
@@ -198,7 +187,10 @@ button {
 .bookdetails {
     padding: 2em;
     margin: 0 6em 0 6em;
-    background-color: var(--sidebar-color);
+    background-image: linear-gradient(
+        #FF0000 210px,
+        var(--sidebar-color) 210px
+    );
     border: var(--thin-border);
 
     display: grid;
@@ -217,13 +209,17 @@ button {
         font-size: 3.25em;
         padding-left: 1em;
         margin-top: -0.15em;  
+        color: var(--sidebar-color);
+
         grid-area: title;
     }
 
     & h2 {
         font-weight: 100;
         font-size: 2em;
-        padding-left: 1.62em;        
+        padding-left: 1.62em;
+        color: var(--sidebar-color);
+        
         grid-area: author;
         align-self: end;
     }
@@ -253,6 +249,8 @@ button {
     /* === Buttons === */
         
     & > button {
+        background-color: var(--sidebar-color);
+        color: var(--text-color);
         border: var(--thin-border);
         transition: var(--tran-05);
         scale: 0.8;
@@ -393,7 +391,6 @@ button {
     }
 
 }
-
 
 
 
