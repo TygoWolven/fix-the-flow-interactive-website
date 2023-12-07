@@ -49,6 +49,8 @@ reservationButton.addEventListener("click" , () =>{
     reservationState.textContent = "Toegevoegd aan Reserveringen!";
 });
 
+// === Dit is voor de navigatieknoppen op de Detailpagina! === //
+
 leftButton.onclick = function () {
     var container = document.querySelector(".recommended > ul");
     sideScroll(container,'left',15,190,10)
@@ -74,14 +76,15 @@ function sideScroll(element,direction,speed,distance,step){
     }, speed);
 }
 
+// === Dit is voor het filtersysteem van de Leeslijst! === //
+
 function isCheckedActie() {
-    var listItem = document.querySelector(".science-fiction");
+    const listItems = document.querySelectorAll(".science-fiction")[0];
     if(document.getElementById("actie").
     checked) {
-        listItem.classList.add("geen-actie");
+        listItems.classList.add("geen-actie");
     } 
     else {
-        listItem.classList.remove("geen-actie");
+        listItems.classList.remove("geen-actie");
     }
 } 
-
