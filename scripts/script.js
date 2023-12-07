@@ -43,7 +43,7 @@ dropDownButton.addEventListener("click" , () =>{
 
 function scrollWin() {
     window.scrollBy(0, 1000);
-}
+};
 
 reservationButton.addEventListener("click" , () =>{
     reservationState.textContent = "Toegevoegd aan Reserveringen!";
@@ -74,12 +74,14 @@ function sideScroll(element,direction,speed,distance,step){
     }, speed);
 }
 
-function isChecked() {
+function isCheckedActie() {
+    var listItem = document.querySelector(".science-fiction");
     if(document.getElementById("actie").
     checked) {
-        console.log("Waddup Homies");
+        listItem.classList.add("geen-actie");
     } 
     else {
-        console.log("Ainoh Fakka");
+        listItem.classList.remove("geen-actie");
     }
 } 
+

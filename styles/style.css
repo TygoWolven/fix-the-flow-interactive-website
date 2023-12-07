@@ -91,6 +91,10 @@ a {
     width: 250px;
 }
 
+.geen-actie {
+    display: none;
+}
+
 /* General Dropdowns */
 .dropdown {
     display: none;
