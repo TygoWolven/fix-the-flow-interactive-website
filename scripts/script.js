@@ -88,3 +88,25 @@ function isCheckedActie() {
         listItems.classList.remove("geen-actie");
     }
 };
+
+function isCheckedRoman() {
+    var listItems = document.querySelector(".actie");
+    if(document.getElementById("roman").
+    checked) {
+        listItems.classList.add("geen-roman");
+    } 
+    else {
+        listItems.classList.remove("geen-roman");
+    }
+};
+
+function isCheckedWaargebeurd() {
+    var listItems = document.querySelector(".roman");
+    if(document.getElementById("waargebeurd").
+    checked) {
+        listItems.classList.add("geen-waargebeurd");
+    } 
+    else {
+        listItems.classList.remove("geen-waargebeurd");
+    }
+};

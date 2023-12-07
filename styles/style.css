@@ -17,6 +17,8 @@
     --thin-border: 0.25em solid var(--sidebar-color);
 }
 
+@media (min-width: 280px) {
+
 /* General */
 * {
     padding: 0;
@@ -66,7 +68,8 @@ button {
 /* General Filters */
 .filters {
     display: flex;
-    gap: 1em;
+    flex-wrap: wrap;
+    gap: 0.5em;
 }
 
 .filters li {
@@ -93,17 +96,19 @@ button {
     }
 }
 
-#genre {
+  #genre {
     width: 180px;
-}
-#language {
+} #language {
     width: 150px;
-}
-#type {
+} #type {
     width: 250px;
 }
 
-.geen-actie {
+  .geen-actie {
+    display: none;
+} .geen-roman {
+    display: none;
+} .geen-waargebeurd {
     display: none;
 }
 
@@ -122,6 +127,8 @@ button {
     position: absolute;
     bottom: 60px;
     left: 60px;
+    overflow: scroll;
+    width: calc(100% - 60px);
 
     & h3 {
         position: sticky;
@@ -133,6 +140,7 @@ button {
 
     & ul {
         display: flex;
+        flex-wrap: wrap;
         gap: 1em;
     }
 
@@ -176,6 +184,25 @@ button {
     top: 100px;
     transition: 0.5s;
     opacity: 0%;
+}
+
+}
+
+@media (min-width: 950px) {
+
+.filters {
+    gap: 1em;
+}
+
+.results {
+
+    & ul {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+}
+
 }
 
 
@@ -753,7 +780,9 @@ body.dark .switch::before{
     left: 250px;
     height: 100vh;
     width: calc(100% - 250px);
-    background-color: var(--body-color);
+    background-image: url(../image/obawallpaper\ \(1\).png);
+    background-size: 100%;
+    background-repeat: no-repeat;
     transition: var(--tran-05);
 }
 .home .text{
