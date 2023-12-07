@@ -41,6 +41,16 @@ button {
     cursor: pointer;
 }
 
+.sidebar.close {
+    transform: translateX(-5em);
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -50px;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -50,8 +60,20 @@ button {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid black;
+    border-top: 7px solid black;
     transition: 0.5s;
+}
+
+.sidebar-arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #FFF;
+    transition: 0.5s;
+
+    position: relative;
+    left: 11px;
 }
 
 .filters > li:hover .arrow {
@@ -189,6 +211,16 @@ button {
 }
 
 @media (min-width: 950px) {
+
+.sidebar.close {
+    transform: none;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+}
 
 .filters {
     gap: 1em;
@@ -628,9 +660,6 @@ header .image-text .profession{
 }
 
 .sidebar header .toggle{
-    position: absolute;
-    top: 50%;
-    right: -25px;
     transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
@@ -638,11 +667,10 @@ header .image-text .profession{
     color: var(--sidebar-color);
     border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 22px;
     cursor: pointer;
     transition: var(--tran-05);
+    align-items: center;
 }
 
 body.dark .sidebar header .toggle{
