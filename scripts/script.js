@@ -79,7 +79,7 @@ function sideScroll(element,direction,speed,distance,step){
 // === Dit is voor het filtersysteem van de Leeslijst! === //
 
 function isCheckedActie() {
-    const listItems = document.querySelectorAll(".science-fiction")[0];
+    var listItems = document.querySelector(".science-fiction");
     if(document.getElementById("actie").
     checked) {
         listItems.classList.add("geen-actie");
@@ -87,4 +87,4 @@ function isCheckedActie() {
     else {
         listItems.classList.remove("geen-actie");
     }
-} 
+};
