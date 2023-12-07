@@ -31,6 +31,14 @@ a {
     color: black;
 }
 
+input {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -59,6 +67,10 @@ a {
 .filters {
     display: flex;
     gap: 1em;
+}
+
+.filters li {
+    cursor: pointer;
 }
 
 .filters > li:hover .dropdown {
