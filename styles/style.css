@@ -157,6 +157,8 @@ button {
     left: 60px;
     overflow: scroll;
     width: calc(100% - 60px);
+    scroll-snap-type: x mandatory;
+
 
     & h3 {
         position: sticky;
@@ -178,6 +180,7 @@ button {
         height: 31.9em;
         overflow: hidden;
         margin-right: 1em;
+        scroll-snap-align: start;
     }
 
     & ul li:hover .small-slide {
