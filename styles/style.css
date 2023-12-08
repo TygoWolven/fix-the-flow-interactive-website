@@ -137,14 +137,9 @@ button {
     width: 250px;
 }
 
-  .geen-actie {
+.hide {
     display: none;
-} .geen-roman {
-    display: none;
-} .geen-waargebeurd {
-    display: none;
-}
-
+} 
 /* General Dropdowns */
 .dropdown {
     display: none;
@@ -174,7 +169,6 @@ button {
     & ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 1em;
     }
 
     & ul li {
@@ -183,6 +177,7 @@ button {
         width: 18em;
         height: 31.9em;
         overflow: hidden;
+        margin-right: 1em;
     }
 
     & ul li:hover .small-slide {

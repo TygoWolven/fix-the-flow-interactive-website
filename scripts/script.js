@@ -37,29 +37,37 @@ const dropDownButton    = document.querySelector(".authinfo > h3 > button"),
 var leftButton          = document.getElementById("scroll-left");
 var rightButton         = document.getElementById("scroll-right");
 
-dropDownButton.addEventListener("click" , () =>{
-    dropDown.classList.toggle("dropdown-open");
-});
+if (dropDownButton != null) {
+    dropDownButton.addEventListener("click" , () =>{
+        dropDown.classList.toggle("dropdown-open");
+    });
+}
+
 
 function scrollWin() {
     window.scrollBy(0, 1000);
 };
 
-reservationButton.addEventListener("click" , () =>{
-    reservationState.textContent = "Toegevoegd aan Reserveringen!";
-});
+if (reservationButton != null) {
+    reservationButton.addEventListener("click" , () =>{
+        reservationState.textContent = "Toegevoegd aan Reserveringen!";
+    });
+}
 
 // === Dit is voor de navigatieknoppen op de Detailpagina! === //
+if (leftButton != null) {
+    leftButton.onclick = function () {
+        var container = document.querySelector(".recommended > ul");
+        sideScroll(container,'left',15,190,10)
+    };
+}
 
-leftButton.onclick = function () {
-    var container = document.querySelector(".recommended > ul");
-    sideScroll(container,'left',15,190,10)
-};
-
-rightButton.onclick = function () {
-    var container = document.querySelector(".recommended > ul");
-    sideScroll(container,'right',15,190,10);
-};
+if (rightButton != null) {
+    rightButton.onclick = function () {
+        var container = document.querySelector(".recommended > ul");
+        sideScroll(container,'right',15,190,10);
+    };
+}
 
 function sideScroll(element,direction,speed,distance,step){
     scrollAmount = 0;
@@ -79,7 +87,9 @@ function sideScroll(element,direction,speed,distance,step){
 // === Dit is voor het filtersysteem van de Leeslijst! === //
 
 function isCheckedActie() {
-    var listItems = document.querySelector(".science-fiction");
+    const listItems = document.querySelectorAll(".science-fiction");
+    console.log(listItems);
+
     if(document.getElementById("actie").
     checked) {
         listItems.classList.add("geen-actie");
@@ -89,8 +99,57 @@ function isCheckedActie() {
     }
 };
 
+
+const checkboxes = document.querySelectorAll('.dropdown input')
+
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', filterByGenre);
+})
+
+function filterByGenre (event) {
+    console.log(event.target.id);
+    const books = document.querySelectorAll('li.' + event.target.id)
+    books.forEach((book) => {
+        if (event.target.checked) {
+            book.classList.remove('hide')
+        } else {
+            book.classList.add('hide')
+        }
+    })
+}
+
+
+// document.querySelectorAll('.dropdown input').forEach((checkbox) => {
+//     checkbox.addEventListener('click', (event) => {
+//         console.log(event);
+//     });
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function isCheckedRoman() {
-    var listItems = document.querySelector(".actie");
+    const listItems = document.querySelector(".actie");
     if(document.getElementById("roman").
     checked) {
         listItems.classList.add("geen-roman");
@@ -101,7 +160,7 @@ function isCheckedRoman() {
 };
 
 function isCheckedWaargebeurd() {
-    var listItems = document.querySelector(".roman");
+    const listItems = document.querySelector(".roman");
     if(document.getElementById("waargebeurd").
     checked) {
         listItems.classList.add("geen-waargebeurd");
