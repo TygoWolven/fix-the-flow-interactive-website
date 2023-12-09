@@ -93,20 +93,28 @@ button {
 
 /* General Filters */
 .filters {
+
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
+
+    & li {
+        cursor: pointer;
+    }
+
+    & p {
+        margin: auto;
+        padding: 0 0 0 2em;
+    }
+    
+    & > li:hover .dropdown {
+        background-color: var(--sidebar-color);
+        display: block;
+        padding: 1em;
+    }
+
 }
 
-.filters li {
-    cursor: pointer;
-}
-
-.filters > li:hover .dropdown {
-    background-color: var(--sidebar-color);
-    display: block;
-    padding: 1em;
-}
 
 .filter-name {
     width: 180px;
