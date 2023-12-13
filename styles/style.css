@@ -4,7 +4,6 @@
 /***************************************************************/
 
 /* Custom Properties */
-
 :root {
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
@@ -343,6 +342,25 @@ button {
 
 }
 
+  /*******************************************************************/
+ /***** Vanaf hier begint mijn eigen code van de Reserveringen! *****/
+/*******************************************************************/
+
+.reservering-arrow {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid var(--primary-color);
+    transition: 0.5s;
+    display: inline-block;
+    margin-left: 1em;
+    position: relative;
+    bottom: 6px;
+}
+
+.reservering-arrow:hover {
+    transform: rotate(180deg);
+}
+
 
   /******************************************************************/
  /***** Vanaf hier begint mijn eigen code van de Detailpagina! *****/
@@ -371,22 +389,26 @@ h2:nth-of-type(1) {
     bottom: 3px;
 }
 
+
+
 .bookdetails {
+
+    position: absolute;
+    left: 60px;
+    right: 60px;
     padding: 2em;
-    margin: 0 6em 0 6em;
     background-image: linear-gradient(
-        #FF0000 210px,
+        #60504D 210px,
         var(--sidebar-color) 210px
     );
-    border: var(--thin-border);
 
     display: grid;
-    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 4fr 1fr;
     grid-template-areas: 
     "image author reservation"
     "image title title"
-    "image details availability"
-    "image list list2"
+    "image summary summary"
     "suggestion suggestion suggestion"
     "authinfo authinfo authinfo";
 
@@ -420,13 +442,9 @@ h2:nth-of-type(1) {
         padding-left: 2.25em;
     }  
 
-    & h3:nth-of-type(2){
-        grid-area: availability;
-    } 
-
     /* === Images === */
 
-    & img {
+    & #book-cover {
         max-width: 22em;
         border: var(--border);
 
@@ -458,38 +476,12 @@ h2:nth-of-type(1) {
 
     /* === Paragraphs === */
 
-    & p {
+    & .summary {
         padding-left: 2em;
 
-        grid-area: description;
+        grid-area: summary;
         align-self: center;
     }
-
-    & > p:nth-of-type(1) {
-        max-width: 80%;
-    }
-
-    /* === Details === */
-
-    & > ul {
-        list-style: none;
-        padding-left: 3.4em;  
-
-        grid-area: list;
-    }
-
-    & > ul:nth-of-type(2) {
-        padding-left: 16em;
-    }
-
-    /* === Beschikbaarheid === */
-
-    & > ul:nth-of-type(3) {
-        padding: 0;
-
-        grid-area: list2;
-    }
-
 }
 
 .recommended {
