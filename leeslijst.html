@@ -144,7 +144,14 @@
 
         <section class="filter-system">
 
-            <input type="text" placeholder="Zoeken naar een boek..." class="searchbar">
+            <div class="searchbar">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Zoeken naar een boek...">
+                <div class="searchbar-filters">
+                    <label for="filter-icon">Filters</label>
+                    <i class='bx bx-filter' id="filter-icon"></i>
+                </div>
+            </div>
 
             <ul class="filters">
                 <li>  
@@ -192,8 +199,9 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="dropdown">
-                        <li>Beoordeling     <input type="radio" id="beoordeling"></li>
-                        <li>Uitgavedatum    <input type="radio" id="uitgavedatum"></li>
+                        <li>Populariteit     <input type="radio" name="sorting" id="beoordeling"></li>
+                        <li>Beoordeling     <input type="radio" name="sorting" id="beoordeling"></li>
+                        <li>Uitgavedatum    <input type="radio" name="sorting" id="uitgavedatum"></li>
                     </ul>
                 </li>
             </ul>

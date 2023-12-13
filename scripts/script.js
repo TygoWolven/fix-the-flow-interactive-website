@@ -111,6 +111,9 @@ function filterByGenre (event) {
 //     });
 // })
 
+const filters = document.querySelector('.searchbar-filters');
+
+
 
 
 

@@ -117,7 +117,7 @@ button {
 /* General Filters */
 .filters {
 
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 0.5em;
 
@@ -138,6 +138,9 @@ button {
 
 }
 
+.show {
+    display: flex;
+}
 
 .filter-name {
     width: 180px;
@@ -153,19 +156,36 @@ button {
     }
 }
 
-.searchbar {
-    border: none;
-    padding: 1em;
-    width: 100%;
-    margin-bottom: 1em;
-}
-
   #genre {
     width: 180px;
 } #language {
     width: 150px;
 } #type {
     width: 250px;
+}
+
+.searchbar {
+    width: 808px;
+    display: flex;
+    background: var(--sidebar-color);
+    padding: 1em;
+    margin: 0 0 1em 0;
+    align-items: center;
+
+    & input {
+        margin: 0 1em 0 1em;
+        border: none;
+    }
+}
+
+.searchbar-filters {
+    position: absolute;
+    right: 1em;
+
+    & i {
+        position: relative;
+        top: 2px;
+    }
 }
 
 /* General Dropdowns */
