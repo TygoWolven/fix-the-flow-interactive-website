@@ -105,17 +105,21 @@ function filterByGenre (event) {
 }
 
 
+
+
 // document.querySelectorAll('.dropdown input').forEach((checkbox) => {
 //     checkbox.addEventListener('click', (event) => {
 //         console.log(event);
 //     });
 // })
 
-const filters = document.querySelector('.searchbar-filters');
+const filters      = document.querySelector('.searchbar-filters'),
+      filterSystem = document.querySelector('.filters');
 
-
-
-
+filters.addEventListener('click', showFilters)
+function showFilters() {
+  filterSystem.classList.toggle('show')
+};
 
 
 
