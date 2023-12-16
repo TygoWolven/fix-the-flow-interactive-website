@@ -44,6 +44,12 @@ button {
     transform: translateX(-5em);
 }
 
+.sidebar.close ~ .home{
+    left: 88px;
+    height: 100vh;
+    width: 100%;
+}
+
 .sidebar header .toggle{
     position: absolute;
     top: 50%;
@@ -56,6 +62,7 @@ button {
 
 .home {
     transform: translateX(-5em);
+    width: 100%;
 }
 
 .home > .text h1 {
@@ -117,7 +124,7 @@ button {
 /* Searchbar */
 .searchbar {
 
-    width: 808px;
+    width: 100%;
     display: flex;
     background: var(--sidebar-color);
     padding: 1em;
@@ -157,7 +164,6 @@ button {
     display: flex;
     z-index: -100;
     flex-wrap: wrap;
-    gap: 0.5em;
     position: absolute;
     top: 0;
     transition: var(--tran-05);
@@ -180,7 +186,7 @@ button {
 }
 
 .show {
-    top: 4em;
+    top: 3.5em;
     transition: var(--tran-05);
 }
 
@@ -317,6 +323,12 @@ button {
     width: 5px;
 }
 
+.sidebar.close ~ .home{
+    left: 88px;
+    height: 100vh;
+    width: calc(100% - 88px);
+}
+
 .sidebar header .toggle{
     position: absolute;
      top: 50%;
@@ -327,8 +339,12 @@ button {
     transform: none;
 }
 
+.searchbar {
+    width: 788.8px;
+}
+
 .filters {
-    gap: 1em;
+    gap: 0.6em;
 }
 
 .results {
@@ -939,11 +955,6 @@ body.dark .switch::before{
     padding: 12px 60px;
 }
 
-.sidebar.close ~ .home{
-    left: 88px;
-    height: 100vh;
-    width: calc(100% - 88px);
-}
 body.dark .home .text{
     color: var(--text-color);
 }
