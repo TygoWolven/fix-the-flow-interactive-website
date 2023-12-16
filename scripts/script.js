@@ -113,15 +113,16 @@ function filterByGenre (event) {
 //     });
 // })
 
-const filters      = document.querySelector('.searchbar-filters'),
-      filterSystem = document.querySelector('.filters');
+const filters           = document.querySelector('.searchbar-filters'),
+      filterSystem      = document.querySelector('.filters'),
+      languageFilter    = document.querySelector('#language'),
+      typeFilter        = document.querySelector('#type'),
+      sortingFilter     = document.querySelector('#sorting');
 
 filters.addEventListener('click', showFilters)
 function showFilters() {
   filterSystem.classList.toggle('show')
 };
-
-
 
 
 
