@@ -114,52 +114,9 @@ function filterByGenre (event) {
 // })
 
 const filters           = document.querySelector('.searchbar-filters'),
-      filterSystem      = document.querySelector('.filters'),
-      languageFilter    = document.querySelector('#language'),
-      typeFilter        = document.querySelector('#type'),
-      sortingFilter     = document.querySelector('#sorting');
+      filterSystem      = document.querySelector('.filters');
 
 filters.addEventListener('click', showFilters)
 function showFilters() {
   filterSystem.classList.toggle('show')
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function isCheckedRoman() {
-    const listItems = document.querySelector(".actie");
-    if(document.getElementById("roman").
-    checked) {
-        listItems.classList.add("geen-roman");
-    } 
-    else {
-        listItems.classList.remove("geen-roman");
-    }
-};
-
-function isCheckedWaargebeurd() {
-    const listItems = document.querySelector(".roman");
-    if(document.getElementById("waargebeurd").
-    checked) {
-        listItems.classList.add("geen-waargebeurd");
-    } 
-    else {
-        listItems.classList.remove("geen-waargebeurd");
-    }
 };

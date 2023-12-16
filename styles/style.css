@@ -169,25 +169,27 @@ button {
     width: 20em;
 } #language {
     width: 20em;
-    transform: translateY(-3.3em);
+    /* transform: translateY(-3.3em); */
 } #type {
     width: 20em;
-    transform: translateY(-6.8em);
+    /* transform: translateY(-6.8em); */
 } #sorting {
     width: 20em;
-    transform: translateY(-10.3em);
+    /* transform: translateY(-10.3em); */
 }
 
 /* General Filters */
 .filters {
 
-    width: 18em;
+    position: absolute;
+    top: 0;
+    height: 3.3em;
+    width: 20em;
     display: flex;
     z-index: -100;
     flex-wrap: wrap;
-    position: absolute;
-    top: 0;
-    transition: var(--tran-05);
+    transition: var(--tran-06);
+    overflow: hidden;
 
     & li {
         cursor: pointer;
@@ -208,8 +210,9 @@ button {
 
 .show {
     top: 3.5em;
-    transition: var(--tran-05);
-    transform: translateY(0);
+    height: 13.2em;
+    overflow: visible;
+    transition: var(--tran-06);
 }
 
 .filter-name {
@@ -218,7 +221,6 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    margin-bottom: 0.5em;
 
     & button {
         background-color: transparent;
@@ -229,6 +231,7 @@ button {
 /* General Dropdowns */
 .dropdown {
     display: none;
+    margin-bottom: 0.5em;
 }
 
 .dropdown > li > input {
@@ -702,6 +705,7 @@ h2:nth-of-type(1) {
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
+    --tran-06: all 0.5s ease;
 }
 
 
