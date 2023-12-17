@@ -182,8 +182,8 @@ button {
 .filters {
 
     position: absolute;
-    top: 0;
-    height: 3.3em;
+    top: 3.5em;
+    height: 0;
     width: 20em;
     display: flex;
     z-index: -100;
@@ -209,9 +209,7 @@ button {
 }
 
 .show {
-    top: 3.5em;
-    height: 13.2em;
-    overflow: visible;
+    height: 13.7em;
     transition: var(--tran-06);
 }
 
@@ -374,7 +372,7 @@ button {
 
 .show {
     top: 3.5em;
-    transition: var(--tran-05);
+    transition: var(--tran-06);
 }
 
 #genre {
