@@ -513,7 +513,6 @@ h2:nth-of-type(1) {
         
     & > button {
         background-color: var(--sidebar-color);
-        color: var(--text-color);
         border: var(--thin-border);
         transition: var(--tran-05);
         scale: 0.8;
@@ -522,8 +521,7 @@ h2:nth-of-type(1) {
     }
 
     & > button:hover {
-        background-color: var(--primary-color);
-        color: var(--sidebar-color);
+        background-color: rgb(230, 230, 230);
         transition: var(--tran-05);
         cursor: pointer;
     }
